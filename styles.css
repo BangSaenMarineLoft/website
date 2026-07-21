@@ -61,7 +61,8 @@
 
 /* ปรับขนาดหัวข้อหมวดสินค้า */
 #products h2{
-  font-size:clamp(38px,4.2vw,60px);
-  line-height:1.08;
-  max-width:420px;
+    font-size:clamp(42px,4vw,58px);
+    line-height:1.05;
+    max-width:320px;
+    margin:0;
 }
