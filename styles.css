@@ -142,3 +142,20 @@
     grid-template-columns:1fr;
   }
 }
+
+
+/* จัดภาพติดตั้งจริงบนมือถือให้เรียงตามลำดับ */
+@media(max-width:600px){
+  #projects .masonry{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+  }
+
+  #projects .masonry img{
+    display:block;
+    width:100%;
+    max-width:none;
+    margin:0;
+  }
+}
