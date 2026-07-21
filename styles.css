@@ -57,3 +57,11 @@
     margin-top:16px;
   }
 }
+
+
+/* ปรับขนาดหัวข้อหมวดสินค้า */
+#products h2{
+  font-size:clamp(38px,4.2vw,60px);
+  line-height:1.08;
+  max-width:420px;
+}
