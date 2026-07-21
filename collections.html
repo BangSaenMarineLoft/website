@@ -1,30 +1,375 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="utf-8">
-<title>หมวดสินค้า | Bang Saen Marine Loft</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>หมวดสินค้า | Bang Saen Marine Loft</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #0b0b0b;
+      color: #f5f0e6;
+      font-family: "Noto Sans Thai", sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 7vw;
+      background: #080808;
+      border-bottom: 1px solid #4c3518;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 1px solid #d3a343;
+      object-fit: cover;
+    }
+
+    .brand b {
+      display: block;
+      font-size: 17px;
+    }
+
+    .brand small {
+      display: block;
+      color: #d3a343;
+      font-family: Oswald, sans-serif;
+      letter-spacing: 0.12em;
+      font-size: 11px;
+    }
+
+    .back {
+      padding: 10px 17px;
+      border: 1px solid #d3a343;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 75px 7vw 45px;
+      background:
+        radial-gradient(circle at 85% 0, #482506 0, #17100a 35%, #090909 70%);
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: #ffb52e;
+      font-family: Oswald, sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+    }
+
+    h1 {
+      margin: 8px 0 18px;
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 1.1;
+    }
+
+    .intro {
+      max-width: 780px;
+      margin: 0;
+      color: #c5bbad;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .categories {
+      padding: 25px 7vw 90px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      background: #0b0b0b;
+    }
+
+    .card {
+      overflow: hidden;
+      background: #151515;
+      border: 1px solid #3d2b16;
+      border-radius: 18px;
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #d3a343;
+    }
+
+    .card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    .card-copy {
+      padding: 20px;
+    }
+
+    .card small {
+      color: #ffad25;
+      font-family: Oswald, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+    }
+
+    .card h2 {
+      margin: 5px 0 8px;
+      font-size: 21px;
+    }
+
+    .card p {
+      min-height: 48px;
+      margin: 0;
+      color: #aaa198;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .notice {
+      margin: 0 7vw 80px;
+      padding: 25px;
+      background: #f2c150;
+      color: #17110a;
+      border-radius: 18px;
+      line-height: 1.8;
+    }
+
+    .notice b {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 19px;
+    }
+
+    footer {
+      padding: 25px 7vw;
+      background: #050505;
+      color: #999087;
+      font-size: 13px;
+    }
+
+    .line {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      padding: 14px 18px;
+      background: #06c755;
+      color: white;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 900px) {
+      .categories {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header {
+        padding: 15px 20px;
+      }
+
+      .brand small {
+        display: none;
+      }
+
+      .hero {
+        padding: 55px 22px 30px;
+      }
+
+      .categories {
+        padding: 20px 22px 70px;
+        grid-template-columns: 1fr;
+      }
+
+      .notice {
+        margin: 0 22px 65px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>หมวดสินค้า</h1>
+  <header class="header">
+    <a class="brand" href="index.html">
+      <img src="assets/images/logo.png" alt="Bang Saen Marine Loft">
+      <span>
+        <b>Bang Saen Marine Loft</b>
+        <small>MARINE • LOFT • INDUSTRIAL</small>
+      </span>
+    </a>
 
-<ul>
-  
-<li>โคมไฟเรือเก่าแท้</li>
-<li>โคมไฟเรืออะลูมิเนียม</li>
-<li>โคมไฟเรือทองเหลือง</li>
-<li>โคมไฟปัดเงา</li>
-<li>โคมไฟชุบโครเมียม</li>
-<li>โคมไฟพ่นสี</li>
-<li>โคมไฟติดผนัง</li>
-<li>โคมไฟแขวน</li>
-<li>โคมไฟกันระเบิด</li>
-<li>สปอตไลท์เรือ</li>
-<li>กระจกห่วงชูชีพ</li>
-<li>หน้าต่างเรือ</li>
-<li>ไม้พาย</li>
-</ul>
+    <a class="back" href="index.html">กลับหน้าแรก</a>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">PRODUCT COLLECTIONS</p>
+    <h1>หมวดสินค้า</h1>
+
+    <p class="intro">
+      รวมโคมไฟพร้อมส่งและพรีออเดอร์ สำหรับคาเฟ่ ร้านอาหาร รีสอร์ท บ้านพัก
+      และงานตกแต่งสไตล์อินดัสเทรียล เลือกชมสินค้าแต่ละหมวดเพื่อดูรายละเอียดเพิ่มเติม
+    </p>
+  </section>
+
+  <main class="categories">
+
+    <article class="card">
+      <img src="assets/images/product-long.jpg" alt="โคมไฟเรือเก่าแท้">
+      <div class="card-copy">
+        <small>AUTHENTIC MARINE LIGHT</small>
+        <h2>โคมไฟเรือเก่าแท้</h2>
+        <p>โคมไฟเรือเก่าที่ผ่านการใช้งานจริง มีเอกลักษณ์และรายละเอียดเฉพาะตัว</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="assets/images/product-yellow.jpg" alt="โคมไฟเรืออะลูมิเนียม">
+      <div class="card-copy">
+        <small>ALUMINIUM LIGHT</small>
+        <h2>โคมไฟเรืออะลูมิเนียม</h2>
+        <p>น้ำหนักเบากว่าเหล็ก เหมาะสำหรับงานตกแต่งภายในและภายนอกบางพื้นที่</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="assets/images/install-wall.jpg" alt="โคมไฟเรือทองเหลือง">
+      <div class="card-copy">
+        <small>BRASS LIGHT</small>
+        <h2>โคมไฟเรือทองเหลือง</h2>
+        <p>วัสดุทองเหลืองให้บรรยากาศคลาสสิก เหมาะกับบ้าน ร้านอาหาร และรีสอร์ท</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="assets/images/product-double.jpg" alt="โคมไฟปัดเงา">
+      <div class="card-copy">
+        <small>POLISHED FINISH</small>
+        <h2>โคมไฟปัดเงา</h2>
+        <p>เพิ่มความโดดเด่นของผิวโลหะ ทั้งนี้ขึ้นอยู่กับวัสดุและรุ่นของสินค้า</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="assets/images/product-long.jpg" alt="โคมไฟชุบโครเมียม">
+      <div class="card-copy">
+        <small>CHROME FINISH</small>
+        <h2>โคมไฟชุบโครเมียม</h2>
+        <p>ผิวเงาสะท้อนแสง เหมาะกับงานตกแต่งที่ต้องการความโดดเด่น</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="assets/images/product-yellow.jpg" alt="โคมไฟพ่นสี">
+      <div class="card-copy">
+        <small>COLOR FINISH</small>
+        <h2>โคมไฟพ่นสี</h2>
+        <p>บางรุ่นสามารถสั่งพ่นสีได้ กรุณาสอบถามรุ่นและสีที่ต้องการก่อนสั่งซื้อ</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="assets/images/install-wall.jpg" alt="โคมไฟติดผนัง">
+      <div class="card-copy">
+        <small>WALL LIGHT</small>
+        <h2>โคมไฟติดผนัง</h2>
+        <p>สำหรับบ้าน คาเฟ่ ร้านอาหาร รีสอร์ท และอาคารพาณิชย์</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="assets/images/product-chain.jpg" alt="โคมไฟแขวน">
+      <div class="card-copy">
+        <small>PENDANT LIGHT</small>
+        <h2>โคมไฟแขวน</h2>
+        <p>มีทั้งแบบห้อยโซ่และแบบแขวน เหมาะกับพื้นที่เพดานสูงและเคาน์เตอร์</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="assets/images/product-long.jpg" alt="โคมไฟกันระเบิด">
+      <div class="card-copy">
+        <small>EXPLOSION-PROOF STYLE</small>
+        <h2>โคมไฟกันระเบิด</h2>
+        <p>โคมไฟรูปทรงอุตสาหกรรมสำหรับงานตกแต่งและพื้นที่เฉพาะ</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="assets/images/product-double.jpg" alt="สปอตไลท์เรือ">
+      <div class="card-copy">
+        <small>MARINE SPOTLIGHT</small>
+        <h2>สปอตไลท์เรือ</h2>
+        <p>โคมไฟทรงสปอตไลท์สำหรับสร้างจุดเด่นในร้าน บ้าน และงานตกแต่ง</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="assets/images/product-mirror.jpg" alt="กระจกห่วงชูชีพ">
+      <div class="card-copy">
+        <small>LIFEBUOY MIRROR</small>
+        <h2>กระจกห่วงชูชีพ</h2>
+        <p>ของตกแต่งสไตล์ทะเล สามารถใส่ข้อความตามเงื่อนไขของแต่ละรุ่น</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="assets/images/product-mirror.jpg" alt="หน้าต่างเรือ">
+      <div class="card-copy">
+        <small>SHIP WINDOW</small>
+        <h2>หน้าต่างเรือ</h2>
+        <p>มีทั้งแบบกระจกและกระจกเงา เหมาะกับการตกแต่งบ้าน ร้าน และรีสอร์ท</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="assets/images/install-round.jpg" alt="ไม้พายตกแต่ง">
+      <div class="card-copy">
+        <small>DECORATIVE PADDLE</small>
+        <h2>ไม้พาย</h2>
+        <p>ไม้พายสำหรับตกแต่งผนัง เพิ่มบรรยากาศสไตล์ทะเลและรีสอร์ท</p>
+      </div>
+    </article>
+
+  </main>
+
+  <section class="notice">
+    <b>หมายเหตุก่อนสั่งซื้อ</b>
+    สินค้าแต่ละรุ่นใช้วัสดุและวิธีทำผิวแตกต่างกัน บางรุ่นไม่สามารถปัดเงา
+    ชุบโครเมียม หรือพ่นสีได้ กรุณาสอบถามรายละเอียดของรุ่นที่สนใจก่อนสั่งซื้อ
+  </section>
+
+  <footer>
+    © 2026 Bang Saen Marine Loft
+  </footer>
+
+  <a class="line" href="https://line.me/R/ti/p/@BangSaenLoftShop">LINE</a>
 
 </body>
 </html>
