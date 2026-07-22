@@ -172,3 +172,66 @@
     margin-top:12px;
     color:#bdbdbd;
 }
+
+/* ปรับหัวข้อ PRODUCTS, VISIT US และ REAL PROJECTS */
+
+#products .section-head,
+#visit-us .section-head,
+#projects .section-head {
+  display: block;
+  margin-bottom: 36px;
+}
+
+#products .section-head > div,
+#visit-us .section-head > div,
+#projects .section-head > div {
+  max-width: 900px;
+}
+
+#products h2 {
+  font-size: clamp(42px, 4vw, 58px);
+  line-height: 1.1;
+  max-width: 720px;
+}
+
+#visit-us h2 {
+  font-size: clamp(42px, 4vw, 58px);
+  line-height: 1.1;
+  max-width: 900px;
+}
+
+#projects h2 {
+  font-size: clamp(42px, 4.4vw, 62px);
+  line-height: 1.1;
+  max-width: 1000px;
+}
+
+@media (max-width: 900px) {
+  #products .section-head,
+  #visit-us .section-head,
+  #projects .section-head {
+    margin-bottom: 28px;
+  }
+
+  #products h2,
+  #visit-us h2,
+  #projects h2 {
+    font-size: 40px;
+    line-height: 1.15;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #products h2 {
+    font-size: 38px;
+  }
+
+  #visit-us h2 {
+    font-size: 38px;
+  }
+
+  #projects h2 {
+    font-size: 36px;
+  }
+}
