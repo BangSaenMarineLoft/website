@@ -158,6 +158,17 @@
     max-width:none;
     margin:0;
   }
+  #visit-us .masonry {
+  display: block;
+}
+
+#visit-us .masonry img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  margin: 0;
+}
 }
 .nowrap{
     white-space: nowrap;
