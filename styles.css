@@ -160,6 +160,9 @@
   }
   #visit-us .masonry {
   display: block;
+  columns: 1;
+  column-count: 1;
+  width: 100%;
 }
 
 #visit-us .masonry img {
